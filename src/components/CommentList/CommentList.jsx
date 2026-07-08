@@ -1,9 +1,11 @@
 // export const CommentList = () => <>Put the list here</>;
-import React from 'react';
 import CommentInfo from '../CommentInfo';
-import './CommentList.scss';
 
 const CommentList = ({ comments }) => {
+  if (comments.length === 0) {
+    return <div data-cy="NoCommentsMessage"> No comments yet </div>;
+  }
+
   return (
     <div className="CommentList">
       {comments.map(comment => (

@@ -1,23 +1,20 @@
 // add styles here
 .CommentInfo {
-  background: #f8f9fa;
-  padding: 12px 15px;
-  border-radius: 6px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   margin-bottom: 10px;
 
   &__name {
-    font-weight: 600;
-    color: #2c3e50;
-    font-size: 0.9rem;
-    margin-bottom: 3px;
+    margin: 0 0 5px 0;
+    font-size: 16px;
   }
 
   &__email {
-    font-size: 0.85rem;
-    color: #3498db;
+    color: #007bff;
     text-decoration: none;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
     &:hover {
       text-decoration: underline;
@@ -26,8 +23,7 @@
 
   &__body {
     margin: 0;
-    color: #34495e;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    color: #666;
+    line-height: 1.5;
   }
 }

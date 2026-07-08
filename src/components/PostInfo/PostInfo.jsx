@@ -1,24 +1,19 @@
 // export const PostInfo = () => <>Put the post here</>;
-import React from 'react';
-import UserInfo from '../UserInfo';
-import CommentList from '../CommentList';
 import './PostInfo.scss';
 
-const PostInfo = ({ post }) => {
-  const { title, body, user, comments } = post;
+import UserInfo from '../UserInfo';
+import CommentList from '../CommentList';
 
-  return (
-    <div className="PostInfo">
-      <h2 className="PostInfo__title">{title}</h2>
-      <p className="PostInfo__body">{body}</p>
-      {user && <UserInfo user={user} />}
-      {comments && comments.length > 0 ? (
-        <CommentList comments={comments} />
-      ) : (
-        <div data-cy="NoCommentsMessage">No comments yet</div>
-      )}
-    </div>
-  );
-};
+const PostInfo = ({ post }) => (
+  <article className="PostInfo">
+    <h3 className="PostInfo__title">{post.title}</h3>
+
+    <p className="PostInfo__body"> {post.body}</p>
+
+    <UserInfo user={post.user} />
+
+    <CommentList comments={post.comments} />
+  </article>
+);
 
 export default PostInfo;
